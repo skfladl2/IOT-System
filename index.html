@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flask-WebSocket Sensor Control</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script> 
+  <script src="iot_with_flask.js"> </script> // 여기 직접 접근 x, flask로 가는거임 
+</head>
+<body>
+
+<p>[<a href="/">home</a>]</p>
+
+<hr>
+<h2>Control LED1</h2>
+Control led1 
+<input type="checkbox" id="tLed" onclick="do_led_chkbox_onclick(this, document.getElementById('tLedLabel'))"> // id="tLed" - getElementById로 받음  // document.getElementById('tLedLabel')여기 label이 js의 label임
+<div id="tLedLabel"> GPIO2 led turned off</div>
+<hr>
+
+<h2>Get Measured data through Websocket</h2>  
+<strong> Number of Measurements:  </strong><br/>   
+<input type="text" id="measurementCnt"/>     <br/>   
+<button onclick="measurement_start()">Start</button> //함수로 넘겨서ㅓ 텍스트 파일에서 받아옴
+<p><b>Log:</b></p>
+<p></p><pre id="log"></pre><p></p>	// 
+<hr> 
+</body>
+</html>

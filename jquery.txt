@@ -1,0 +1,11 @@
+교수님 자료
+서버쪽에 계속 요청하는게 아니라
+요청이 왔을때 처리하게 함
+ajax?
+jquery -? $(document)
+jquery를 사용하기 위해 html파일을 수정해야함
+ $(document).ready(function) <-document 가 실행되면 저 함수가 불림
+exit을 해서 
+# - ID에 대한 것임 
+document.Touch <-  Touch는 이름임 id가 아님
+ps -elf 
